@@ -65,9 +65,8 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Group{" +
-                "courseName='" + courseName + '\'' +
-                '}';
+        return "" +
+                 courseName ;
     }
 
     private void checkIndex(int index) {
