@@ -47,9 +47,9 @@ public class Group {
         group.remove(student);
     }
 
-    public void removeStudentByIndex(int index) {
-        checkIndex(index-1);
-        group.remove(index);
+    public void removeStudent(int index) {
+        checkIndex(index);
+        group.remove(index-1);
     }
 
     public boolean containsStudent(Student student) {
@@ -58,15 +58,13 @@ public class Group {
 
     public void getGroup() {
         for (int i = 0; i < group.size(); i++) {
-            System.out.println(i + 1 + " " + group.get(i));
+            System.out.println(i + 1 + ". " + group.get(i));
         }
-
     }
 
     @Override
     public String toString() {
-        return "" +
-                 courseName ;
+        return courseName;
     }
 
     private void checkIndex(int index) {

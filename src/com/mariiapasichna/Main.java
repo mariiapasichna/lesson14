@@ -46,7 +46,7 @@ public class Main {
 		java.removeStudent(snow);
 		java.getGroup();
 
-		java.removeStudentByIndex(1);
+		java.removeStudent(1);
 		java.getGroup();
 
 		System.out.println(java.containsStudent(smitt));

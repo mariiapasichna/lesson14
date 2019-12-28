@@ -26,8 +26,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "" +
-                  name +
-                ", groups=" + groups ;
+        return name +
+                ", groups=" + groups;
     }
 }
