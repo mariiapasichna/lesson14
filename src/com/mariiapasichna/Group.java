@@ -57,6 +57,9 @@ public class Group {
     }
 
     public List<Student> getGroup() {
+        for (int i = 0; i < group.size(); i++) {
+            System.out.println(i + 1 + " " + group.get(i));
+        }
         return group;
     }
 
