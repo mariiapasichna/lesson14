@@ -36,18 +36,18 @@ public class Main {
 		frontEnd.addStudent(simpson, frontEnd);
 		frontEnd.addStudent(klinton, frontEnd);
 		frontEnd.addStudent(snow, frontEnd);
-		System.out.println(frontEnd.getGroup());
+		frontEnd.getGroup();
 
 		java.addStudent(smitt, java);
 		java.addStudent(black, java);
 		java.addStudent(snow, java);
-		System.out.println(java.getGroup());
+		java.getGroup();
 
 		java.removeStudent(snow);
-		System.out.println(java.getGroup());
+		java.getGroup();
 
 		java.removeStudentByIndex(1);
-		System.out.println(java.getGroup());
+		java.getGroup();
 
 		System.out.println(java.containsStudent(smitt));
 

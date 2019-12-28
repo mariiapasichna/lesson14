@@ -56,11 +56,11 @@ public class Group {
         return group.contains(student);
     }
 
-    public List<Student> getGroup() {
+    public void getGroup() {
         for (int i = 0; i < group.size(); i++) {
             System.out.println(i + 1 + " " + group.get(i));
         }
-        return group;
+
     }
 
     @Override
