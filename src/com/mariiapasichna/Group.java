@@ -48,7 +48,7 @@ public class Group {
     }
 
     public void removeStudentByIndex(int index) {
-        checkIndex(index);
+        checkIndex(index-1);
         group.remove(index);
     }
 
