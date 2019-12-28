@@ -32,15 +32,15 @@ public class Main {
 		Group frontEnd = new Group("FrontEnd", "21.05.2020", 32, 2);
 		Group pyton = new Group("Pyton", "03.07.2020", 20, 2);
 
-		frontEnd.addStudent(parker, frontEnd);
-		frontEnd.addStudent(simpson, frontEnd);
-		frontEnd.addStudent(klinton, frontEnd);
-		frontEnd.addStudent(snow, frontEnd);
+		frontEnd.addStudent(parker);
+		frontEnd.addStudent(simpson);
+		frontEnd.addStudent(klinton);
+		frontEnd.addStudent(snow);
 		frontEnd.getGroup();
 
-		java.addStudent(smitt, java);
-		java.addStudent(black, java);
-		java.addStudent(snow, java);
+		java.addStudent(smitt);
+		java.addStudent(black);
+		java.addStudent(snow);
 		java.getGroup();
 
 		java.removeStudent(snow);

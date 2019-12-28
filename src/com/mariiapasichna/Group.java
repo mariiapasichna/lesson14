@@ -38,9 +38,9 @@ public class Group {
         return courseName + "/" + dateStart;
     }
 
-    public void addStudent(Student student, Group group) {
+    public void addStudent(Student student) {
         this.group.add(student);
-        student.addGroup(group);
+        student.addGroup(this);
     }
 
     public void removeStudent(Student student) {
