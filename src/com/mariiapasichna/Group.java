@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class Group {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -21,18 +23,10 @@ public class Group {
         this.classesPerWeek = classesPerWeek;
     }
 
-    public Group(String courseName, LocalDate dateStart, int totalClasses, int classesPerWeek, List<Student> group) {
-        this.courseName = courseName;
-        this.dateStart = dateStart;
-        this.totalClasses = totalClasses;
-        this.classesPerWeek = classesPerWeek;
-        this.group = group;
-    }
-
     public String getLastWeekCourse() {
         TemporalField field = WeekFields.of(Locale.GERMANY).dayOfWeek();
-        int daysOfCourse = totalClasses / classesPerWeek * 7 - 7;
-        LocalDate dateLastWeekCourse = dateStart.plusDays(daysOfCourse).with(field, 1);
+        int weeksOfCourse = totalClasses / classesPerWeek - 1;
+        LocalDate dateLastWeekCourse = dateStart.plusWeeks(weeksOfCourse).with(field, 1);
         return dateLastWeekCourse.format(FORMATTER);
     }
 
