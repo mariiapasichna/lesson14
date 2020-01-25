@@ -11,11 +11,6 @@ public class Student {
         this.name = name;
     }
 
-    public Student(String name, List<Group> groups) {
-        this.name = name;
-        this.groups = groups;
-    }
-
     public void addGroup(Group group) {
         groups.add(group);
     }
@@ -26,9 +21,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", groups=" + groups +
-                '}';
+        return name +
+                ", groups=" + groups;
     }
 }

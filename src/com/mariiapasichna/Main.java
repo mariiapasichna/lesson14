@@ -1,6 +1,7 @@
 package com.mariiapasichna;
 
 import java.text.ParseException;
+import java.time.LocalDate;
 
 public class Main {
 
@@ -28,32 +29,38 @@ public class Main {
 		Student simpson = new Student("Simpson");
 		Student klinton = new Student("Klinton");
 
-		Group java = new Group("Java", "12.03.2020", 16, 2);
-		Group frontEnd = new Group("FrontEnd", "21.05.2020", 32, 2);
-		Group pyton = new Group("Pyton", "03.07.2020", 20, 2);
+		Group java = new Group("Java", LocalDate.of(2020,3,12), 16, 2);
+		Group frontEnd = new Group("FrontEnd",LocalDate.of(2020,2,21), 32, 2);
+		Group pyton = new Group("Pyton", LocalDate.of(2020,8,23), 20, 2);
 
-		frontEnd.addStudent(parker, frontEnd);
-		frontEnd.addStudent(simpson, frontEnd);
-		frontEnd.addStudent(klinton, frontEnd);
-		frontEnd.addStudent(snow, frontEnd);
-		System.out.println(frontEnd.getGroup());
+		frontEnd.addStudent(parker);
+		frontEnd.addStudent(simpson);
+		frontEnd.addStudent(klinton);
+		frontEnd.addStudent(snow);
+		frontEnd.printGroup();
+		System.out.println();
 
-		java.addStudent(smitt, java);
-		java.addStudent(black, java);
-		java.addStudent(snow, java);
-		System.out.println(java.getGroup());
+		java.addStudent(smitt);
+		java.addStudent(black);
+		java.addStudent(snow);
+		java.addStudent(simpson);
+		java.printGroup();
+		System.out.println();
 
 		java.removeStudent(snow);
-		System.out.println(java.getGroup());
+		java.printGroup();
+		System.out.println();
 
-		java.removeStudentByIndex(1);
-		System.out.println(java.getGroup());
+		java.removeStudent(1);
+		java.printGroup();
+		System.out.println();
 
 		System.out.println(java.containsStudent(smitt));
 
 		System.out.println(snow.getGroups());
 
 		System.out.println(Group.getGroupName("Java", "12.03.2020"));
-		System.out.println(java.getLastWeekCourse("Java", "12.03.2020"));
+		System.out.println(java.getLastWeekCourse());
+		System.out.println(frontEnd.getLastWeekCourse());
 	}
 }
