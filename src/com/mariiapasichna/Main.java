@@ -23,7 +23,10 @@ public class Main {
 		frontEnd.addStudent(klinton);
 		frontEnd.addStudent(snow);
 		frontEnd.printGroup();
+
 		System.out.println();
+
+		System.out.println(" ");
 
 		java.addStudent(smitt);
 		java.addStudent(black);
@@ -39,6 +42,16 @@ public class Main {
 		java.removeStudent(1);
 		java.printGroup();
 		System.out.println();
+
+		System.out.println(" ");
+
+		java.removeStudent(snow);
+		java.printGroup();
+		System.out.println(" ");
+
+		java.removeStudent(1);
+		java.printGroup();
+		System.out.println(" ");
 
 		System.out.println(java.containsStudent(smitt));
 
